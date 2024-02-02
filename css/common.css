@@ -12,4 +12,22 @@
     color: #212121;
     line-height: 1.5;
   }
+  body {
+    padding: 16px;
+  }
+  
+  .list-item {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-left: 8px;
+  }
+  
+  .gallery{
+    display: flex;
+    align-items: center;
+    row-gap: 8px;
+    list-style-type: none;
+  }
+  
   
