@@ -1,4 +1,4 @@
-const nameUser = document.querySelector("#name-input")
+const nameUser = document.querySelector("#name-input");
 
 //nameUser.addEventListener("input", addNameUser)
 const output = document.querySelector("#name-output");
@@ -7,11 +7,16 @@ const output = document.querySelector("#name-output");
 //     output.textContent = event.currentTarget.value;
 //       });
 
-nameUser.addEventListener("input", (event) => {
-    if(event.target.elements.nameUser.value!=="" || event.target.element.nameUser.value!==" "){
-    output.textContent = event.currentTarget.value;
-    }
-    else {
-        output.textContent = "Anonymous";
-    }
-  });
+// nameUser.addEventListener("input", (event) => {
+//   if (event.currentTarget.value) {
+//     console.log(event.currentTarget.value);
+//     output.textContent = event.currentTarget.value.trim();
+//   }
+// });
+nameUser.addEventListener("keydown", (event) => {
+  if (event.code === "Space") {
+    output.innerHTML = "Anonymous";
+  } else {
+    output.textContent = event.currentTarget.value.trim();
+  }
+});
