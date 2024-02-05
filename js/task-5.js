@@ -1,14 +1,20 @@
-function getRandomHexColor () {
-  const colorRandom =  `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-    bodyColor.style.backgroundColor = colorRandom;
-    spanColor.innerHTML = colorRandom;
-    return colorRandom;
-}
-  
-  const buttonColor = document.querySelector(".change-color");
-  const spanColor = document.querySelector(".color");
-  const bodyColor = document.querySelector("body");
-  buttonColor.addEventListener('click', getRandomHexColor);
-  
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+const descendant = document.querySelector("#descendant");
+
+parent.addEventListener("click", () => {
+  alert(
+    "Parent click handler. This alert will not appear when clicking on Descendant, the event will not reach here!"
+  );
+});
+
+child.addEventListener("click", () => {
+  alert(
+    "Child click handler. This alert will not appear when clicking on Descendant, the event will not reach here!"
+  );
+});
+
+descendant.addEventListener("click", (event) => {
+  event.stopPropagation();
+  alert("Descendant click handler");
+});

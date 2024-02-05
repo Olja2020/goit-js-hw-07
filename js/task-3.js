@@ -1,17 +1,24 @@
 const nameUser = document.querySelector("#name-input")
 
-//nameUser.addEventListener("input", addNameUser)
 const output = document.querySelector("#name-output");
 
-
-
-
-
 nameUser.addEventListener("input", (event) => {
-    if(event.target.elements.nameUser.value!=="" || event.target.element.nameUser.value!==" "){
-    output.textContent = event.currentTarget.value;
+    nameUser.innerHTML="";
+    const arr=[];
+    arr.push(event);
+    
+
+    for(const event of arr){
+    if(event.data =="" || event.data ==" ") {
+        
+        output.textContent = "Anonymous";
+       
     }
     else {
-        output.textContent = "Anonymous";
-    }
+        nameUser.innerHTML="";
+        output.textContent = event.currentTarget.value.trim();
+        console.log(event.currentTarget.value.trim()); 
+    }}
+    
   });
+  

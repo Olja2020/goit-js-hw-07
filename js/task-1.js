@@ -3,10 +3,10 @@ console.log(categories);
  let sum = 0;
  for (let i = 0; i < categories.length; i++) {
     
-     sum +=i
-     //console.log("кількість категорій:", sum);
+     
+     
  }
- console.log("кількість категорій:", sum);
+ console.log("кількість категорій:", categories.length);
 
  
 for(let item of document.querySelectorAll(".item")) {

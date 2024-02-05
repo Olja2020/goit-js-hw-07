@@ -11,24 +11,27 @@ const inputNumber = document.querySelector("input");
 
 function createBoxes(amount) {
   amount = inputNumber.value;
-  if (inputNumber.value >= 1 && inputNumber.value < 100) {
+  destroyBoxes();
+  if (inputNumber.value >= 1 && inputNumber.value <= 100) {
     let size = 30;
     for (let i = 0; i < amount; i += 1) {
       const elemBox = document.createElement("div");
 
       boxes.prepend(elemBox);
-      size += 10 * i;
+      size += 10;
       elemBox.classList = "item";
       elemBox.style.width = `${size}px`;
       elemBox.style.height = `${size}px`;
       elemBox.style.marginRight = "30px";
       elemBox.style.marginBottom = "30px";
       elemBox.style.backgroundColor = getRandomHexColor();
+      
     }
   } else {
     alert("Введіть число в діапазоні від 1 до 100");
   }
   inputNumber.value = "";
+  
 }
 
 function destroyBoxes() {

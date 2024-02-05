@@ -30,10 +30,13 @@ const images = [
   const list = document.querySelector(".gallery");
 
   
-        const markup = images.map((image) =>`<li class="list-item"><img src =${image.url} alt = ${image.alt} width="100" height="100"</li>`).join("");
+        const markup = images.map((image) =>
+        `<li class="list-item"><img src =${image.url} alt = ${image.alt} width="100" height="100"</li>`)
+        .join("");
+        
         list.insertAdjacentHTML("beforeend", markup);
 
   
   
-  console.log(list);
+  
   
