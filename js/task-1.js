@@ -1,22 +1,12 @@
 const categories = document.querySelectorAll(".item");
 console.log(categories);
- let sum = 0;
- for (let i = 0; i < categories.length; i++) {
-    
-     
-     
- }
- console.log("кількість категорій:", categories.length);
 
- 
-for(let item of document.querySelectorAll(".item")) {
+for (let i = 0; i < categories.length; i++) {}
+console.log("кількість категорій:", categories.length);
 
-    
-    let title = item.firstElementChild.textContent;
-    let countLi = item.getElementsByTagName('li').length;
-    console.log("h2:", title);
-    console.log("кількість елементів у категорії:", countLi);
-    
+for (let item of document.querySelectorAll(".item")) {
+  let title = item.firstElementChild.textContent;
+  let countLi = item.getElementsByTagName("li").length;
+  console.log("h2:", title);
+  console.log("кількість елементів у категорії:", countLi);
 }
-
-

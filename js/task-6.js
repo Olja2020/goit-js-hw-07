@@ -17,7 +17,7 @@ function createBoxes(amount) {
     for (let i = 0; i < amount; i += 1) {
       const elemBox = document.createElement("div");
 
-      boxes.prepend(elemBox);
+      boxes.append(elemBox);
       size += 10;
       elemBox.classList = "item";
       elemBox.style.width = `${size}px`;
@@ -25,13 +25,11 @@ function createBoxes(amount) {
       elemBox.style.marginRight = "30px";
       elemBox.style.marginBottom = "30px";
       elemBox.style.backgroundColor = getRandomHexColor();
-      
     }
   } else {
     alert("Введіть число в діапазоні від 1 до 100");
   }
   inputNumber.value = "";
-  
 }
 
 function destroyBoxes() {
@@ -39,13 +37,3 @@ function destroyBoxes() {
 }
 destroy.addEventListener("click", destroyBoxes);
 create.addEventListener("click", createBoxes);
-
-//     Після кліку на кнопку Create, якщо в input значення поза межами діапазону 1-100, нічого не відбувається
-
-// Після кліку на кнопку Create в div#boxes додається така кількість різнокольорових квадратів, яка вказана в input.
-// Значення input очищається
-// Після повторного кліку на кнопку Create попередні квадрати повністю прибираються і замість них додаються нові
-//у кількості, що вказана в input. Значення input очищається
-// Усі квадрати в div#boxes різнокольорові і мають фон випадкового кольору
-// Перший квадрат у div#boxes має розміри 30px на 30px, а кожен наступний на 10px вищий і ширший від попереднього
-// Після натискання на кнопку Destroy усі квадрати з div#boxes мають видалятися
